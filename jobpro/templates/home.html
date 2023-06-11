@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<script src="{% static 'home.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'landing.css' %}">
+    <link rel="stylesheet" href="{% static 'hor.css' %}">
+</head>
+<body>
+<div class="header">
+    <h1>get job</h1>
+    <button onclick="Login()">login</button>
+    <div class="popup">
+        <div id="login" class="popuptext">
+           <form method="post" action="log" >
+               {% csrf_token %}
+            <input type="text" name="Lname" placeholder="name" class="formStyle">
+            <input type="password" name="password" placeholder="password" class="formStyle">
+            <input type="submit" value="submit">
+           </form>
+        </div>
+    </div>
+    <label class="toggle">
+        <input type="checkbox">
+        <span class="slider" onclick="toggleData()"></span>
+    </label>
+    <div class="nameClass" id="data1">
+        <p>employee </p>
+    </div>
+    <div class="nameClass" id="data2" style="display: none;">
+        <p>employer</p>
+    </div>
+</div>
+
+<div class="edit" id="Employee" >
+    <div class="sortIn">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Sequi illo nemo, laborum aliquam, iste deleniti omnis
+            modi, odit minima expedita est qui distinctio porro
+            corporis aperiam accusamus harum praesentium? Magni!</p>
+        <img src=" {% static 'login.jpg' %}">
+    </div>
+    <div class="sortIn">
+        <img src=" {% static 'login.jpg' %}">
+       <div>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Sequi illo nemo, laborum aliquam, iste deleniti omnis
+            modi, odit minima expedita est qui distinctio porro
+            corporis aperiam accusamus harum praesentium? Magni!</p>
+          <div class="popup"><button class="btn" onclick="Register()" style="color:red;">register</button>
+              <div class="popuptext" id="Register">
+                <form method="post" action="reg">
+                    {% csrf_token %}
+                    <input type="text" name="jsname" placeholder="name"  class="formStyle" required>
+                    <input type="number" name="jsage" placeholder="age" class="formStyle">
+                    <input type="number" name="jsnumber" placeholder="ph number" class="formStyle">
+                    <input type="text" name="jsgender" placeholder="gender" class="formStyle">
+                    <input type="text" name="jseducation" placeholder="Education" class="formStyle">
+                    <input type="email" name="jsemail" placeholder="email" class="formStyle" required>
+                    <input type="password" name="jspassword" placeholder="password" class="formStyle" required>
+                    <input type="submit" value="submit" class="formStyle">
+                </form>
+               </div>
+              </div>
+       </div>
+    </div>
+</div>
+<div class="edit" id="Employer"  style="display:none;">
+    <div class="sortIn">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Sequi illo nemo, laborum aliquam, iste deleniti omnis
+            modi, odit minima expedita est qui distinctio porro
+            corporis aperiam accusamus harum praesentium? Magni!</p>
+        <img src=" {% static 'login.jpg' %}">
+    </div>
+    <div class="sortIn">
+        <img src=" {% static 'login.jpg' %}">
+        <div>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Sequi illo nemo, laborum aliquam, iste deleniti omnis
+                modi, odit minima expedita est qui distinctio porro
+                corporis aperiam accusamus harum praesentium? Magni!</p>
+            <div class="popup"><button onclick="hireNow()">hire now</button>
+                <div class="popuptext" id="hire">
+                  <form method="post" action="hir">
+                     {% csrf_token %}
+                      <input type="name" name="jgname" placeholder="name" class="formStyle" required>
+                      <input type="name" name="jgfield" placeholder="type of company" class="formStyle">
+                      <input type="number" name="jgnumber" placeholder="contact number" class="formStyle">
+                      <input type="text" name="jglocation" placeholder="location" class="formStyle">
+                     <input type="email" name="jgemail" placeholder="email" class="formStyle" required>
+                     <input type="password" name="jgpassword" placeholder="password" class="formStyle" required>
+                     <input type="submit" value="submit">
+                  </form>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

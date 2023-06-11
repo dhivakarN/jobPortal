@@ -1,0 +1,79 @@
+.toggle input[type="checkbox"] {
+   display: none;
+ }
+
+ .toggle .slider {
+ margin:10px 0 ;
+   position: relative;
+   display: inline-block;
+   width: 60px;
+   height: 34px;
+   background-color: #ccc;
+   border-radius: 34px;
+   transition: background-color 0.3s;
+ }
+
+ .toggle .slider:before {
+   position: absolute;
+   content: "";
+   height: 26px;
+   width: 26px;
+   left: 4px;
+   bottom: 4px;
+   background-color: white;
+   border-radius: 50%;
+   transition: transform 0.3s;
+ }
+
+ .toggle input[type="checkbox"]:checked + .slider {
+   background-color: #2196F3;
+ }
+
+ .toggle input[type="checkbox"]:checked + .slider:before {
+   transform: translateX(26px);
+ }
+
+.popup {
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-item:center;
+  cursor: pointer;
+  margin:100px 0 0 0;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 10em;
+  height:250;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: fixed;
+  z-index: 1;
+  bottom: 200px;
+  left: 500px;
+  margin-left: -80px;
+}
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+

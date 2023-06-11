@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'homePage.css'%}">
+</head>
+<body>
+<div class="header">
+    <h1>get job</h1>
+    <button>login</button>
+</div>
+ <form method="POST" action="h">
+     {% csrf_token %}
+    <input type="text" name="jsname" placeholder="name"  class="formStyle" required>
+    <input type="number" name="jsage" placeholder="age" class="formStyle">
+    <input type="number" name="jsnumber" placeholder="ph number" class="formStyle">
+    <input type="text" name="jsgender" placeholder="gender" class="formStyle">
+    <input type="text" name="jseducation" placeholder="Education" class="formStyle">
+    <input type="email" name="jsemail" placeholder="email" class="formStyle" required>
+    <input type="password" name="jspassword" placeholder="password" class="formStyle" required>
+    <input type="submit" value="submit" class="formStyle">
+ </form>
+</body>
+</html>

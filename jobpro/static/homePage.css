@@ -1,0 +1,20 @@
+.header{
+margin:0 -5px 0 -5px;
+width: auto;
+height: 50px;
+display:flex;
+justify-content:space-between;
+box-shadow: 0 3px  9px;
+}
+
+.register{
+display:flex;
+justify-content:space-between;
+}
+
+.formStyle{
+display:block;
+flex-direction:column;
+padding:20px;
+}
+
