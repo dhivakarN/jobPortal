@@ -74,7 +74,7 @@ def data(request):
 def joBs(request):
     return render(request,'jobs.html')
 
-def add(request):
+def ad(request):
     a=request.POST['cmpnyNAme']
     b=request.POST['jname']
     c=request.POST['jedu']
