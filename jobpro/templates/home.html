@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
 	<script src="{% static 'home.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'landing.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'hor.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="header">
-    <h1>get job</h1>
-    <button onclick="Login()">login</button>
+    <h1>getJob</h1>
+    <button onclick="Login()" id="btn">login</button>
     <div class="popup">
         <div id="login" class="popuptext">
            <form method="post" action="log" >
@@ -33,23 +38,26 @@
         <p>employer</p>
     </div>
 </div>
-
+<br>
+<br>
+<br>
 <div class="edit" id="Employee" >
     <div class="sortIn">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Sequi illo nemo, laborum aliquam, iste deleniti omnis
-            modi, odit minima expedita est qui distinctio porro
-            corporis aperiam accusamus harum praesentium? Magni!</p>
-        <img src=" {% static 'login.jpg' %}">
+        <p>Gone are the days when we open the daily newspaper,
+            searching for the job we wish to do
+             from the lot of
+        a number of jobs in the classified section</p>
+        <!-- <img src=" {% static 'login.jpg' %}"> -->
+        <img src="{% static 'jobw.webp' %}">
     </div>
     <div class="sortIn">
-        <img src=" {% static 'login.jpg' %}">
+        <!-- <img src=" {% static 'login.jpg' %}"> -->
+        <img src="{% static 'jobw2.png' %}">
        <div>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Sequi illo nemo, laborum aliquam, iste deleniti omnis
-            modi, odit minima expedita est qui distinctio porro
-            corporis aperiam accusamus harum praesentium? Magni!</p>
-          <div class="popup"><button class="btn" onclick="Register()" style="color:red;">register</button>
+          <p>Get the job you love with a click from your finger.<br>
+            GET JOB.
+          </p>
+          <div class="popup"><button onclick="Register()" id="btn2">register</button>
               <div class="popuptext" id="Register">
                 <form method="post" action="reg">
                     {% csrf_token %}
@@ -69,19 +77,17 @@
 </div>
 <div class="edit" id="Employer"  style="display:none;">
     <div class="sortIn">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Sequi illo nemo, laborum aliquam, iste deleniti omnis
-            modi, odit minima expedita est qui distinctio porro
-            corporis aperiam accusamus harum praesentium? Magni!</p>
-        <img src=" {% static 'login.jpg' %}">
+        <p>Gone are the days when we open the daily newspaper,
+            searching for the job we wish to do
+             from the lot of
+        a number of jobs in the classified section</p>
+        <img src=" {% static 'jobw.webp' %}">
     </div>
     <div class="sortIn">
-        <img src=" {% static 'login.jpg' %}">
+        <img src=" {% static 'jobw2.png' %}">
         <div>
-             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Sequi illo nemo, laborum aliquam, iste deleniti omnis
-                modi, odit minima expedita est qui distinctio porro
-                corporis aperiam accusamus harum praesentium? Magni!</p>
+             <p>Get the job you love with a click from your finger.<br>
+                GET JOB.</p>
             <div class="popup"><button onclick="hireNow()">hire now</button>
                 <div class="popuptext" id="hire">
                   <form method="post" action="hir">
@@ -99,5 +105,62 @@
         </div>
     </div>
 </div>
+<br><br><br>
+<div class="next">
+    <br>
+    <center><p style="color: aliceblue;">Leading Giants in the IT Sector</p></center>
+
+    <div class="row">
+        <div class="column">
+            <center><img src="{% static 'ts.jpg' %}" style="border-radius: 50%;"></center>
+        </div>
+        <div class="column">
+            <center><img src="{% static 'eh.jpg' %}" style="border-radius: 50%;"></center>
+        </div>
+        <div class="column">
+            <center><img src="{% static 'sr.jpg' %}" style="border-radius: 50%;"></center>
+        </div>
+    </div>
+
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<div class="container">
+    <img src="{% static 'jbb.avif' %}" style="float: right;width: 900px;height: 450px;">
+    <div class="textblock">
+        <h3>Various Jobs For You</h3>
+        <p>Software Engineer</p>
+        <p>Data Analyst</p>
+        <p>Cyber Security</p>
+        <p>UI-UX Designer</p>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="last"><center><h1>getJob</h1></center>
+<br>
+
+</div>
+
 </body>
 </html>
