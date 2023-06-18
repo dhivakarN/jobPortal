@@ -6,3 +6,5 @@ function showData() {
   var loginEl = document.getElementById("showdata");
    loginEl.classList.toggle("show");
 }
+
+C:\Users\DELL\OneDrive\Documents\GitHub\jobPortal\jobpro

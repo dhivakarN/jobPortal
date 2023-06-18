@@ -34,27 +34,26 @@
  }
 
 .popup {
-  position: relative;
-  display: flex;
+  position:relative;
+  display:inline-block;
   justify-content:center;
   align-item:center;
   cursor: pointer;
-  margin:100px 0 0 0;
+  margin:100px 20px 0 0;
 }
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
   visibility: hidden;
   width: 10em;
-  height:250;
-  background-color: #555;
+  height:150;
   color: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 8px 0;
   position: fixed;
   z-index: 1;
-  bottom: 200px;
+  bottom: 60px;
   left: 500px;
   margin-left: -80px;
 }
@@ -185,5 +184,7 @@ h1{
   background-color: #313131;
   color: #fff;
 }
+
+
 
 
