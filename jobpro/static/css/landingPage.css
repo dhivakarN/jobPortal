@@ -1,0 +1,87 @@
+
+.landingPage{
+display : flex;
+ justify-content: space-around;
+padding: 10px 0 0 0;
+}
+
+body{
+margin:0 10px;
+}
+
+.userInteraction{
+margin: 0 0 0 0 ;
+width: 170vh;
+}
+
+.resumeDetails , .signUp{
+height: 250px;
+font-family: "Montserrat", system-ui, sans-serif;
+letter-spacing:1.5px;
+font-size: 20px;
+padding: 0 0 0 10px;
+}
+
+.jobView {
+  display:flex;
+  flex-direction: column-reverse;
+  overflow: auto;
+  width:130vh;
+  height:91vh;
+
+&::-webkit-scrollbar {
+  display: none;
+}}
+
+.jobDetails{
+  border: 1px solid black;
+
+  margin:10px 0;
+display:flex;
+justify-content:space-around;
+}
+
+.photoView >* {
+  display: block;
+  margin: 5px 0 0 0;
+  width: 200px;
+  height:200px;
+
+
+}
+
+
+
+.resumeDetails button ,.signUp button {
+color:white;
+font-size:17px;
+background-color:teal;
+width:140px;
+height:45px;
+border-radius:15px;
+border:none;
+}
+
+.button{
+color: teal;
+ width: 320px;
+  padding: 10px;
+  border-radius:15px;
+  border: 2px solid teal;
+  margin: 0;}
+
+body {
+  font-family: "Montserrat", system-ui, sans-serif;
+}
+
+.resumeButton{
+ width: 320px;
+  padding: 10px;
+  border-radius:15px;
+  border: 2px solid teal;
+  margin: 0;
+color: white;
+background-color:teal;
+}
+
+

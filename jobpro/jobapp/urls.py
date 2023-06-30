@@ -17,16 +17,20 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('',views.fun,name="fun"),
-    path('reg',views.userRegister,name="regi"),
-    path('hir',views.cmpnyRegister,name="cmpnyregi"),
-    path('log',views.login,name="logi"),
-    path('home1',views.emplOyee,name="home1"),
-    path('home2',views.emplOyer,name="home2"),
-    path('t',views.data,name="home3"),
-    path('r',views.uData,name="home4"),
-    path('job',views.joBs,name="JOBS"),
-    path('add',views.add,name="JOBSe"),
+    path('',views.landingPage,name="landingPage"),
+    path('t',views.landingPage,name="loggedPage"),
+    path('view/<str:company_name>',views.companyView,name="companyView"),
+    path('resume',views.viewResume,name="resume"),
+    path('application',views.sentApplication,name="jobApplication"),
+    # path('reg',views.userRegister,name="regi"),
+    # path('hir',views.cmpnyRegister,name="cmpnyregi"),
+    # path('log',views.login,name="logi"),
+    # path('home1',views.emplOyee,name="home1"),
+    # path('home2',views.emplOyer,name="home2"),
+    # path('t',views.data,name="home3"),
+    # path('r',views.uData,name="home4"),
+    # path('job',views.joBs,name="JOBS"),
+    # path('add',views.add,name="JOBSe"),
 
 
 ]

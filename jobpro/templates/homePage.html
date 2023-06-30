@@ -9,21 +9,7 @@
     <link rel="stylesheet" href="{% static 'home.css'%}">
 </head>
 <body>
-<div class="header">
-    <a href="{% url 'home'%}"><button>get job</button></a>
-    <button onclick="Login()">login</button>
 
-</div>
-    <div class="popup">
-        <div id="login" class="popuptext">
-           <form method="post" >
-           {% csrf_token %}
-            <input type="email" name="email" placeholder="email" class="formStyle">
-            <input type="password" name="password" placeholder="password" class="formStyle">
-            <input type="submit" value="submit">
-           </form>
-        </div>
-    </div>
 
 <div class="register">
     <div id="employee" class="home">

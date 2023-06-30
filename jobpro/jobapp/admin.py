@@ -4,4 +4,4 @@ from .models import *
 admin.site.register(employee)
 admin.site.register(employer)
 admin.site.register(jobDetail)
-
+admin.site.register(Fileupload)

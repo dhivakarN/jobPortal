@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% extends "mainHeader.html" %}
+{% load static %}
+{% block body_block %}
+
+
+<div class="landingPage">
+    <div class="userInteraction">
+        <div class="resumeDetails">
+            <h1>find the job that is perfect for you</h1>
+            <a href = "{% url 'resume' %}" class="resumeButton">upload resume</a>
+        </div>
+
+        <div class="container">{% include 'slider.html' %}</div>
+
+        <div class="signUp">
+            <h1>ready to get started?</h1>
+            <a class=button href="#popup2" >signUp</a>
+            <h1 id="change">and gain access to a world of exciting jobs</h1>
+        </div>
+    </div>
+    <div class="jobView">
+            {% for i in jobs %}
+        <div class ="jobDetails">
+            <div class = "photoView">
+                <img src="{% static 'images/job.webp' %}">
+            </div>
+
+            <div class="tyre">
+                 <p> {{i.companyName}}</p>
+                 <p> {{i.name}}</p>
+                 <p> {{i.education}}</p>
+                 <p> {{i.Time}}</p>
+                 <p> {{i.salary}}</p>
+                <a href=" {% url 'jobApplication' %}">apply</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <img src="{% static 'images/jobLogin.jpg' %}">
+            <div class="formViewer">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="email" name="email" placeholder="email" class="formStyle">
+                    <input type="password" name="password" placeholder="password" class="formStyle">
+                    <input type="submit" value="submit" class="pressButton">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup2" class="overlay">
+    <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <img src="{% static 'images/jobLogin.jpg' %}">
+            <div class="formViewer">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="email" name="email" placeholder="email" class="formStyle">
+                    <input type="password" name="password" placeholder="password" class="formStyle">
+                    <input type="password" name="password" placeholder="password" class="formStyle">
+                    <input type="password" name="password" placeholder="password" class="formStyle">
+                    <input type="password" name="password" placeholder="password" class="formStyle">
+                    <input type="password" name="password" placeholder="password" class="formStyle">
+                    <input type="submit" value="submit" class="pressButton">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/landingPage.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/jobSliding.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/formView.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/popUpView.css'%}">
+{% endblock %}

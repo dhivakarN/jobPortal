@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+{% load static %}
+<head>
+  <meta charset="UTF-8"><title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/mainHeader.css'%}">
+    <link rel="stylesheet" href="{% static 'css/dropDown.css'%}">
+	<script src="{% static 'javascript/dropdown.js' %}"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+
+<body>
+
+
+<div class="headerDetails">
+    <a href="{% url 'landingPage'%}" id="webPageTitle">getjob</a>
+    <div class="routers">
+        <a href="{% url 'landingPage'%}" >about</a>
+        <a href="#popup1" >login</a>
+        <a href="{% url 'landingPage'%}">contact us</a>
+        <a href="{% url 'landingPage'%}">contact us</a>
+    </div>
+   <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">for employer</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#home">post a job</a>
+            <a href="#about">buy online</a>
+            <a href="#contact">employer login</a>
+        </div>
+</div>
+<!--    <a href="{% url 'landingPage'%}" class = "buttonDrop"></a>-->
+</div>
+
+
+
+
+ {% block body_block %} {% endblock %}
+{% block extra_css %} {% endblock %}
+</body>
+</html>

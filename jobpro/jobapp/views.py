@@ -2,13 +2,29 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import *
 # Create your views here.
+# jobadmin typewritter
+def landingPage(request):
+    employerDetails=employer.objects.all()
+    jobs = jobDetail.objects.all()
+    return render(request,"landingPage.html",{'employer':employerDetails,'jobs':jobs})
 
-def fun(request):
-    return render(request,"home.html")
 
-def register(request):
-    return render(request,"home.html")
+def companyView(request,company_name = ''):
+    if company_name != '':
+        details = employer.objects.get(name=company_name)
+        currentJobs = jobDetail.objects.filter(companyName=company_name)
+    return render(request,"companyProfile.html",{'company': details , 'jobs':currentJobs})
 
+def viewResume(request):
+    return  render(request,"resume.html")
+
+def sentApplication(request):
+    name = "usd"
+
+
+    return
+# def testing(request):
+#     return  render((request,))
 def userRegister(request):
     a=request.POST['jsname']
     b=request.POST['jsage']
@@ -22,6 +38,8 @@ def userRegister(request):
     return render(request,"home.html")
 
 def cmpnyRegister(request):
+
+
     a=request.POST['jgname']
     b=request.POST['jgfield']
     c=request.POST['jgnumber']
@@ -46,7 +64,6 @@ def login(request):
             return redirect('home2')
         else:
             return HttpResponse("wrong")
-
 
 def emplOyee(request):
     if 'empLoyee' in request.session:

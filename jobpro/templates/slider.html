@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+{% block body_block %}
+<div class="marquee-wrapper">
+                <div class="marquee">
+                    <div aria-hidden="true" class="marquee-group"> {% for company in employer %}
+                        <a href="{% url 'companyView' company.name %}" class="marquee-tag-wrapper">
+                            <div class="marquee-tag-container"><span class="marquee-tag">{{ company.name }}</span></div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    <div aria-hidden="true" class="marquee-group"> {% for company in employer %}
+                        <a href="{% url 'companyView' company.name %}" class="marquee-tag-wrapper">
+                            <div class="marquee-tag-container"><span class="marquee-tag">{{ company.name }}</span></div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/landingPage.css'%}">
+{% endblock %}

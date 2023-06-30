@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "mainHeader.html" %}
+{% load static %}
+{% block body_block %}
+
+<h1>{{company.name}}</h1>
+<h1>{{company.field}}</h1>
+<h1>{{company.location}}</h1>
+<h1>{{company.name}}</h1>
+<h1>{{company.name}}</h1>
+
+{% for i in jobs %}
+
+<h1>{{i.name}}</h1>
+
+{% endfor %}
+
+<div>
+    {% include 'testing.html' %}
+</div>
+
+
+{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/landingPage.css'%}">
+{% endblock %}
