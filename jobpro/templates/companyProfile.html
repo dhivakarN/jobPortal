@@ -6,17 +6,17 @@
 <h1>{{company.name}}</h1>
 <h1>{{company.field}}</h1>
 <h1>{{company.location}}</h1>
-<h1>{{company.name}}</h1>
-<h1>{{company.name}}</h1>
+<h1>{{company.phoneNumber}}</h1>
 
+<div>
 {% for i in jobs %}
 
 <h1>{{i.name}}</h1>
+<h1>{{i.education}}</h1>
+<h1>{{i.Time}}</h1>
+<h1>{{i.salary}}</h1>
 
 {% endfor %}
-
-<div>
-    {% include 'testing.html' %}
 </div>
 
 

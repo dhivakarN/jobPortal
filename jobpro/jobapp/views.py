@@ -19,33 +19,34 @@ def viewResume(request):
     return  render(request,"resume.html")
 
 def sentApplication(request):
-    name = "usd"
+    name = "urte"
 
 
     return
 # def testing(request):
 #     return  render((request,))
 def userRegister(request):
-    a=request.POST['jsname']
-    b=request.POST['jsage']
-    c=request.POST['jsnumber']
-    d=request.POST['jsgender']
-    e=request.POST['jseducation']
-    f=request.POST['jsemail']
-    g=request.POST['jspassword']
-    data1=employee(name=a,age=b,phNumber=c,gender=d,education=e,email=f,password=g)
-    data1.save()
-    return render(request,"home.html")
+    a,b,c,d,e,f,g = "a",1,4,"a","a","a@gmail.com","terr"
+    # a=request.POST['name']
+    # b=request.POST['age']
+    # c=request.POST['phoneNumber']
+    # d=request.POST['gender']
+    # e=request.POST['education']
+    # f=request.POST['email']
+    # g=request.POST['password']
+    data=employee(name=a,age=b,phoneNumber=c,gender=d,education=e,email=f,password=g)
+    print(data)
+
+    return render(request,"userProfile.html",{"data":data})
 
 def cmpnyRegister(request):
 
-
-    a=request.POST['jgname']
-    b=request.POST['jgfield']
-    c=request.POST['jgnumber']
-    d=request.POST['jglocation']
-    e=request.POST['jgemail']
-    f=request.POST['jgpassword']
+    a=request.POST['name']
+    b=request.POST['field']
+    c=request.POST['number']
+    d=request.POST['location']
+    e=request.POST['email']
+    f=request.POST['password']
     data2=employer(cmpnyname=a, cmpnyfield=b, phNumber=c, location=d, email=e, password=f)
     data2.save()
     return render(request,"home.html")
@@ -75,7 +76,7 @@ def uData(request):
     a=employee.objects.filter(name=current_user)
     b=employer.objects.all()
     c=jobDetail.objects.all()
-    return render(request,"uProfile.html",{'data':a,'dataa':b,'daata':c})
+    return render(request,"userProfile.html",{'data':a,'dataa':b,'daata':c})
 
 
 def emplOyer(request):

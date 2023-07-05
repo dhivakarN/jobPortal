@@ -22,6 +22,7 @@ urlpatterns = [
     path('view/<str:company_name>',views.companyView,name="companyView"),
     path('resume',views.viewResume,name="resume"),
     path('application',views.sentApplication,name="jobApplication"),
+    path('userRegister',views.userRegister,name="userRegistration"),
     # path('reg',views.userRegister,name="regi"),
     # path('hir',views.cmpnyRegister,name="cmpnyregi"),
     # path('log',views.login,name="logi"),
