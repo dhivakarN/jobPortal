@@ -1,37 +1,55 @@
  <!DOCTYPE html>
+ {% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-      <link rel="stylesheet" href="bootstrap.min.css">
+      <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
 <style>
-    *{
-        box-sizing: border-box;
+    body{
+        background-image: url(rsme3.jpg);
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        background-size: cover;
     }
-    .column{
-        float: left;
-        width: 50%;
-        padding: 10px;
-  height: 600px;
+    .card{
+        box-shadow: 0px 4px 8px 0px rgb(0, 0, 0);
+        width:58%;
+        margin-top: 13%;
+        margin-left: 3%;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+
     }
-    .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    .container{
+        padding: 15px;
+    }
+    hr.solid{
+        border-top: 3px solid;
+        margin-left: 0%;
+        color: rgb(0, 0, 0);
+    }
+
 </style>
 </head>
+
 <body>
-<div class="row">
-    <div class="column" style="background-color: black;">
-        <h3 style="margin-left: 40%;margin-top: 30%;color: aliceblue;">Upload<br>Resume</h3>
+
+
+<div class="card">
+    <div class="container">
+    <h3 style="color: rgb(0, 0, 0);">Upload </h3><h1 style="color: dodgerblue;"> Resume</h1>
+    <hr class="solid">
+    <p style="color: rgb(255, 255, 255);">Tell us more about you through this resume</p>
+
+
+            <form action="/action_page.php">
+                <input type="file"  myFile name="filename">
+
+                        <input type="submit" class="btn btn-primary">
+            </form>
+        </div>
     </div>
-    <div class="column" style="background-color: rgb(187, 0, 0);">
-        <form action="">
-            <input style="margin-left: 40%;margin-top: 30%;color: rgb(0, 0, 0);" type="file" class="btn btn-primary" name="file">
-            <input  style="margin-left: 55%;color: rgb(0, 0, 0);" type="submit" class="btn btn-success">
-        </form>
-    </div>
-</div>
+
 </body>
 </html>

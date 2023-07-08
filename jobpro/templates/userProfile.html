@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 {% load static %}
 <head>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
 </head>
+
 <body>
 
-<h1>{{ data.name }}</h1>
-<h1>{{ data.name }}</h1>
-<h1>{{ data.name }}</h1>
-<h1>{{ data.name }}</h1>
+<h2 style="display:flex;">User Profile</h2>
+<div class="v1">
 
 
+<img src="{% static 'images/img_avatar.png' %}" >
+<div class="upcard">
 
+<h2>{{ data.name }}</h2>
+<h2>{{ data.education }}</h2>
+<h2>{{ data.age }}</h2>
+<h2>{{data.location}}</h2>
+<h2><i class="fa fa-search">{{ data.email }}</i></h2>
+
+
+</div>
+</div>
+<p>Update your Resume</p>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/fontawesome.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/jobView.css' %}" type="text/css">
+
+
+{% endblock %}
 </body>

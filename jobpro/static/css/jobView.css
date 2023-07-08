@@ -1,0 +1,52 @@
+.jobbcard{
+        box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+        width:18%;
+        margin-top: 3%;
+        margin-left:40%;
+        padding: 1%;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+}
+.jobdcard{
+        box-shadow: 0px 4px 8px 0px rgb(0, 0, 0);
+        width:18%;
+        margin-top: 3%;
+        margin-left: 37%;
+        padding: 1%;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+}
+span{
+margin-left:32%;
+}
+h3{
+color:teal;
+}
+.new1{
+border-top:3px dashed teal;
+}
+.hr1{
+border-top:3px dotted;
+}
+.upcard{
+        box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+        width:70%;
+        padding: 1%;
+        color:white;
+        background-color:teal;
+}
+img{
+height:238px;
+width:250px;
+margin-right:350px;
+float:right;
+background-color:white;
+}
+.v1{
+border-left:6px solid black;
+height:238px;
+margin-left:100px;
+left: 50%;
+margin-left: -3px;
+top: 0;
+}
