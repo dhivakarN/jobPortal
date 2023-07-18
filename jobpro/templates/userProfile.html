@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-
 {% load static %}
 <head>
     <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
@@ -10,23 +8,26 @@
 
 <body>
 
-<h2 style="display:flex;">User Profile</h2>
-<div class="v1">
 
 
-<img src="{% static 'images/img_avatar.png' %}" >
-<div class="upcard">
+<div class="profileborder">
+    <img src="{% static 'images/img_avatar.png' %}" >
+    <div class="namecard">
 
-<h2>{{ data.name }}</h2>
-<h2>{{ data.education }}</h2>
-<h2>{{ data.age }}</h2>
-<h2>{{data.location}}</h2>
-<h2><i class="fa fa-search">{{ data.email }}</i></h2>
+    <h1 style="font-size:70px;">{{ data.name }}</h1>
+        </div>
+        <div class="userdetails">
+        <h2>{{ data.education }}</h2>
+        <h2>{{ data.age }}</h2>
+        <h2>{{data.location}}</h2>
+        <h2>{{ data.email }}</h2>
 
+        </div>
 
+    <a href = "{% url 'resume' %}" class="resumeButton">upload resume</a>
 </div>
-</div>
-<p>Update your Resume</p>
+
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}" type="text/css">
 <link rel="stylesheet" href="{% static 'css/jobView.css' %}" type="text/css">

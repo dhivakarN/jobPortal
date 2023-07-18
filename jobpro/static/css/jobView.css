@@ -2,22 +2,22 @@
         box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
         width:18%;
         margin-top: 3%;
-        margin-left:40%;
+        margin-left:36%;
         padding: 1%;
+        text-align:center;
         color: rgb(0, 0, 0);
         background-color: rgb(255, 255, 255);
 }
 .jobdcard{
         box-shadow: 0px 4px 8px 0px rgb(0, 0, 0);
-        width:18%;
-        margin-top: 3%;
-        margin-left: 37%;
-        padding: 1%;
+        width:240px;
+        margin-top: 23px;
+        margin-left:83px;
+        padding: 9px;
         color: rgb(0, 0, 0);
-        background-color: rgb(255, 255, 255);
 }
 span{
-margin-left:32%;
+margin-left:2%;
 }
 h3{
 color:teal;
@@ -28,17 +28,25 @@ border-top:3px dashed teal;
 .hr1{
 border-top:3px dotted;
 }
-.upcard{
+.namecard{
         box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
-        width:70%;
+        width:40%;
         padding: 1%;
-        color:white;
-        background-color:teal;
+        margin-left:13%;
+        margin-top:50px;;
+}
+.userdetails{
+ box-shadow: 0px 4px 8px 0px rgb(0, 0, 0);
+        width:58%;
+        margin-top: 2%;
+        margin-left:13%;
+        padding: 1%;
+        color: rgb(0, 0, 0);
 }
 img{
-height:238px;
-width:250px;
-margin-right:350px;
+height:200px;
+width:230px;
+margin-right:360px;
 float:right;
 background-color:white;
 }
@@ -49,4 +57,36 @@ margin-left:100px;
 left: 50%;
 margin-left: -3px;
 top: 0;
+}
+.grid-container{
+display:inline-grid;
+grid-template-columns: auto auto auto;
+  padding: 10px;
+  margin:10% 20%;
+}
+.grid-item {
+  border-right-style:dashed 2px;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+.jobView{
+display:flex;
+}
+.resumeButton{
+width: 320px;
+padding: 10px;
+border-radius:15px;
+border: 2px solid teal;
+margin-left:467px;
+color: white;
+background-color:teal;
+text-decoration:none;
+}
+
+.profileborder{
+border: 3px solid teal;
+border-radius:15px;
+width:1200px;
+margin-left:33px;
 }

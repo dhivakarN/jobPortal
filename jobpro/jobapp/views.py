@@ -27,13 +27,13 @@ def sentApplication(request):
 #     return  render((request,))
 def userRegister(request):
     a,b,c,d,e,f,g = "name","age","phoneNumber","gender","education","email","password"
-    a=request.POST['name']
-    b=request.POST['age']
-    c=request.POST['phoneNumber']
-    d=request.POST['gender']
-    e=request.POST['education']
-    f=request.POST['email']
-    g=request.POST['password']
+    # a=request.POST['name']
+    # b=request.POST['age']
+    # c=request.POST['phoneNumber']
+    # d=request.POST['gender']
+    # e=request.POST['education']
+    # f=request.POST['email']
+    # g=request.POST['password']
     data=employee(name=a,age=b,phoneNumber=c,gender=d,education=e,email=f,password=g)
     print(data)
 

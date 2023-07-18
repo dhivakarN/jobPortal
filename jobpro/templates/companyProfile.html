@@ -3,27 +3,27 @@
 {% load static %}
 {% block body_block %}
 
-<h1 style="font-size:70px;margin-left:38%;">{{company.name}}</h1>
 <div class="jobbcard">
+<h1 style="font-size:90px;">{{company.name}}</h1>
 <h1>Field:{{company.field}}</h1>
 <h1>{{company.location}}</h1>
 <h1>{{company.phoneNumber}}</h1>
 </div>
 <hr class="hr1">
 <h3><span>Job details </span></h3>
-<div class="jobdcard">
 {% for i in jobs %}
+<div class="jobView">
+    <div class="jobdcard">
+        <h2>{{i.name}}</h2>
+        <h4>Qualification:{{i.education}}</h4>
+        <h4>Time:{{i.Time}}</h4>
+        <h4>Salary:{{i.salary}}</h4>
+            <button onclick="fun()">Apply Now</button>
+    </div>
 
-<h2>{{i.name}}</h2>
-<h4>Qualification:{{i.education}}</h4>
-<h4>Time:{{i.Time}}</h4>
-<h4>Salary:{{i.salary}}</h4>
-    <a class="btn btn-danger">Apply Now</a>
-    <hr class="new1">
 
 
-{% endfor %}
-</div>
+    {% endfor %}
 </div>
 
 {% endblock %}
